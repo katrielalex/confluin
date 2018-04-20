@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
 import setuptools
-import sys
-
-assert sys.version_info.major > 2, 'Use Python 3 to run this setup.py. Thanks, antlr.'
 
 with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'README.rst')) as readme:
     long_description = readme.read()
@@ -21,6 +18,7 @@ setuptools.setup(
 
     packages=setuptools.find_packages(),
 
+    python_requires='>3',
     install_requires=[
         'attrs',
         'antlr4-python3-runtime',
