@@ -22,9 +22,11 @@ setuptools.setup(
     packages=setuptools.find_packages(),
 
     install_requires=[
-        'click',
-        'jinja2',
+        'attrs',
         'antlr4-python3-runtime',
+        'click',
+        'coloredlogs',
+        'jinja2',
     ],
 
     classifiers=[
