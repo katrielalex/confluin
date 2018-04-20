@@ -32,6 +32,14 @@ Or clone the repo:
 Requirements
 ^^^^^^^^^^^^
 
+You'll need the following. No, there's no good way to install them. Yes, it's horrible.
+
+  - maude_ (2.7.1 is a good version)
+  - muterm_
+
+.. _maude: http://maude.cs.illinois.edu/w/index.php?title=Maude_download_and_installation
+.. _muterm: http://zenon.dsic.upv.es/muterm/?page_id=191
+
 Authors
 -------
 
