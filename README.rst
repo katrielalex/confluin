@@ -12,6 +12,9 @@ A confluence checker for Tamarin equational theories
 Usage
 -----
 
+    $ confluin foo.spthy
+
+and see what it says!
 
 
 Installation
@@ -28,12 +31,6 @@ Or clone the repo:
 
 Requirements
 ^^^^^^^^^^^^
-
-Compatibility
--------------
-
-Licence
--------
 
 Authors
 -------
