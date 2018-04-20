@@ -1,5 +1,12 @@
 # -*- coding: utf-8 -*-
+import os
 import setuptools
+import sys
+
+assert sys.version_info.major > 2, 'Use Python 3 to run this setup.py. Thanks, antlr.'
+
+with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'README.rst')) as readme:
+    long_description = readme.read()
 
 setuptools.setup(
     name='confluin',
@@ -10,11 +17,15 @@ setuptools.setup(
     author_email='me@katriel.co.uk',
 
     description='A confluence checker for Tamarin equational theories',
-    long_description=open('README.rst').read(),
+    long_description=long_description,
 
     packages=setuptools.find_packages(),
 
-    install_requires=['click'],
+    install_requires=[
+        'click',
+        'jinja2',
+        'antlr4-python3-runtime',
+    ],
 
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
