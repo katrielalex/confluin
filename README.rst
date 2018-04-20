@@ -1,13 +1,11 @@
 confluin
 ========
 
-.. image:: https://img.shields.io/pypi/v/confluin.svg
-    :target: https://pypi.python.org/pypi/confluin
-    :alt: Latest PyPI version
+.. image:: https://travis-ci.org/katrielalex/confluin.svg?branch=master
+    :target: https://travis-ci.org/katrielalex/confluin
+    :alt: Latest Travis CI build status
 
-.. image:: www.example.com.png
-   :target: www.example.com
-   :alt: Latest Travis CI build status
+
 
 A confluence checker for Tamarin equational theories
 
