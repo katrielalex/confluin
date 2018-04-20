@@ -1,14 +1,15 @@
+# -*- coding: utf-8 -*-
 import setuptools
 
 setuptools.setup(
-    name="confluin",
-    version="0.1.0",
-    url="https://github.com/katrielalex/confluin",
+    name='confluin',
+    version='0.1.0',
+    url='https://github.com/katrielalex/confluin',
 
-    author="Katriel Cohn-Gordon",
-    author_email="me@katriel.co.uk",
+    author='Katriel Cohn-Gordon',
+    author_email='me@katriel.co.uk',
 
-    description="A confluence checker for Tamarin equational theories",
+    description='A confluence checker for Tamarin equational theories',
     long_description=open('README.rst').read(),
 
     packages=setuptools.find_packages(),

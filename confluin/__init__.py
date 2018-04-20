@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """confluin - A confluence checker for Tamarin equational theories"""
 
 __version__ = '0.1.0'
@@ -14,4 +15,4 @@ import logging
 def main():
     logging.basicConfig(level=logging.DEBUG)
     logger = logging.getLogger(__package__)
-    logger.info("Hello, world!")
+    logger.info('Hello, world!')
