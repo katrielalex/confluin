@@ -1,43 +1,18 @@
 # -*- coding: utf-8 -*-
-import jinja2
 import logging
 import subprocess
 import tempfile
 
 
+from . import renderer
+
+
 log = logging.getLogger('confluin.termination')
-
-
-template = jinja2.Environment(
-    autoescape=True,
-    loader=jinja2.BaseLoader(),
-).from_string("""
-fmod CONFLUIN is
-    sort Msg .
-
-    {% for op, arity in ops.items() -%}
-    op {{ op }} {{ "_ " * arity }}: {{ "Msg " * arity }} -> Msg .
-    {% endfor %}
-    vars{% for v in vars %} {{ v }}{% endfor %}: Msg .
-    {% for eq in eqs %}
-    eq {{ eq }} .
-    {% endfor %}
-endfm
-""")
-
-
-def render(symbols):
-    mutermify = str.maketrans('(,)', ' ' * 3)
-    return template.render(
-        ops=symbols.functions,
-        vars=symbols.bases,
-        eqs={eq.translate(mutermify) for eq in symbols.equations},
-    )
 
 
 def check(symbols, muterm):
     with tempfile.NamedTemporaryFile(buffering=False, suffix='.maude') as f:
-        rendered = render(symbols)
+        rendered = renderer.render(symbols, muterm=True)
         log.debug('Rendered template: \n%s', rendered)
         f.write(rendered.encode('ascii'))
         result = subprocess.run(

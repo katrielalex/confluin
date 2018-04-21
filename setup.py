@@ -25,6 +25,8 @@ setuptools.setup(
         'click',
         'coloredlogs',
         'jinja2',
+        'pexpect',
+        'pylocated',
     ],
 
     classifiers=[

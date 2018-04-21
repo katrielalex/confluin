@@ -22,7 +22,8 @@ class Collector(Listener):
         self.functions[ctx.name().getText()] = int(ctx.arity().getText())
 
     def enterEquation(self, ctx):
-        self.equations.add(ctx.getText())
+        # Maude sometimes barfs on unspaced = signs, so add space just in case
+        self.equations.add(ctx.getText().replace('=', ' = '))
 
     def enterBase(self, ctx):
         self._bases.add(ctx.getText())
