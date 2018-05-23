@@ -2,7 +2,7 @@
 import os
 import setuptools
 
-with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'README.rst')) as readme:
+with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'README.md')) as readme:
     long_description = readme.read()
 
 setuptools.setup(
